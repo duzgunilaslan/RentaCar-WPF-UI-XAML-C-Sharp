@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CMPE312_RentaCar"
         mc:Ignorable="d"
-        Title="DASK" Height="635" Width="1300">
+        Title="DASK" Height="635" Width="1300"  ResizeMode="NoResize"  WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <ImageBrush x:Key="Login" ImageSource="icons/login-last.png" Stretch="Uniform"/>
         <Style x:Key="FocusVisual">

@@ -42,6 +42,9 @@
       <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,9 +64,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Add.xaml.cs">
+      <DependentUpon>Add.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gallery.xaml.cs">
+      <DependentUpon>Gallery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModifyPage.xaml.cs">
+      <DependentUpon>ModifyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RentaCarDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RentaCarDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
+    <Page Include="Add.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gallery.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -76,6 +101,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ModifyPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Window1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -103,6 +132,17 @@
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RentaCarDBDataSet.xsc">
+      <DependentUpon>RentaCarDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RentaCarDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RentaCarDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RentaCarDBDataSet.xss">
+      <DependentUpon>RentaCarDBDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -142,10 +182,41 @@
     <Resource Include="car_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="galerim_button.png" />
+    <Resource Include="ADD_VEHICLE.png" />
+    <Resource Include="gallery.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="gallery.png" />
+    <Resource Include="history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\car_icon3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\page_background2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\power_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\fiat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\ford2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\ford.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\opel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\cirtoen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\home.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

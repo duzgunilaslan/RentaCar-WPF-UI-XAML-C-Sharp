@@ -12,18 +12,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace CMPE312_RentaCar
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+   
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
-           
+            
+
         }
 
         private void Grid_ToolTipOpening(object sender, ToolTipEventArgs e)
@@ -40,12 +42,7 @@ namespace CMPE312_RentaCar
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-          /*  if (user.Text=="ali")
-            {
-                MessageBox.Show("sifre Dogru");
-            }
-            else
-                MessageBox.Show("sifre yanlıis"); */
+          
             if (password.Password.Equals("1234") && user.Text == "dask")
             {
                 Window1 page2 = new Window1();
